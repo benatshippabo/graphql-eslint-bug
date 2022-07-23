@@ -1,0 +1,16 @@
+{
+  "name": "graphl-eslint-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "^3.10.6",
+    "eslint": "^8.20.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "graphql": "^16.5.0"
+  }
+}

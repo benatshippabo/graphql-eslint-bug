@@ -1,0 +1,15 @@
+type Query {
+  user(id: String!): UserResult
+}
+
+union UserResult = Account | Error
+
+type Account {
+  id: ID!
+  name: String!
+  phone: String
+}
+
+type Error {
+  message: String!
+}
