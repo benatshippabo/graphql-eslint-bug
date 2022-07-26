@@ -1,5 +1,7 @@
 # graphql-eslint-bug
 
+https://github.com/B2o5T/graphql-eslint/issues/1117
+
 Given this schema:
 
 ```gql
@@ -20,7 +22,7 @@ type Error {
 }
 ```
 
-We expect `@graphql-eslint/eslint-plugin` configured with eslint:
+we expect `@graphql-eslint/eslint-plugin` eslint configured with:
 
 ```yml
 rules:
@@ -33,7 +35,7 @@ to error out for the inline `Account` fragment and `Account` fragment:
 query UserById($id: String!) {
   user(id: $id) {
     ... on Account {
-      # inline fragment: expect an error here about missing `id` field
+      # inline fragment: we expect an error here about missing `id` field
       ...UserFields
     }
 
@@ -44,7 +46,7 @@ query UserById($id: String!) {
 }
 
 fragment UserFields on Account {
-  # fragment: expect an error here about missing `id` field
+  # fragment: we expect an error here about missing `id` field
   name
   phone
 }
