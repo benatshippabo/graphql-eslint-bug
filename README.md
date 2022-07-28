@@ -35,7 +35,7 @@ to error out for the inline `Account` fragment and `Account` fragment:
 query UserById($id: String!) {
   user(id: $id) {
     ... on Account {
-      # inline fragment: we expect an error here about missing `id` field
+      # inline fragment: we expect an error here about a missing `id` field
       ...UserFields
     }
 
@@ -46,7 +46,7 @@ query UserById($id: String!) {
 }
 
 fragment UserFields on Account {
-  # fragment: we expect an error here about missing `id` field
+  # fragment: we expect an error here about a missing `id` field
   name
   phone
 }
